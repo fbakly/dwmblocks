@@ -1,7 +1,7 @@
 //Modify this file to change what commands output to your statusbar, and recompile using the make command.
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
-	{"  ", 	"pacman -Qu", 			3600, 	0},
+	{"  ", 	"pacman -Qu | wc -l", 			3600, 	0},
 
 	{"MEMORY ", "echo $(free -m | grep -i mem | awk '{print $3}')/$(free -m | grep -i mem | awk '{print $2}') MB", 	1, 	0},
 
