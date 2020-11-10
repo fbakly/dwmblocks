@@ -3,7 +3,7 @@ static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 	{"  ", 	"sudo pacman -Sy | pacman -Qu | wc -l", 			60, 	0},
 
-	{"MEMORY ", "echo $(free -m | grep -i mem | awk '{print $3}')/$(free -m | grep -i mem | awk '{print $2}') MB", 	1, 	0},
+	{"MEMORY ", "free -m | awk \'/Mem/ \{print $3\"/\"$2 \" MB\"\}\'", 	1, 	0},
 
 	{"﨎", 	"expr $(cat /sys/class/thermal/thermal_zone0/temp) / 1000", 	1, 	0},
 
